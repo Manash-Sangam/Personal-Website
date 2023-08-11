@@ -1,0 +1,245 @@
+html::-webkit-scrollbar{
+    display: none;
+    scroll-behavior: smooth;
+}
+nav{
+    position: fixed;
+    top:0;
+    height: 10%;
+    width: 100%;
+    z-index: 50;
+}
+#navtag{
+    display: flex;
+    justify-content: right;
+}
+h3{
+    color: #ffe;
+    font-family: 'Roboto', sans-serif;
+    font-size:2vh;
+    text-decoration: underline;
+}
+h3:hover{
+    color: #222;
+}
+.nav-button-wrapper{
+    padding: 0 5%;
+}
+#svg-scroll{
+    position:fixed;
+    bottom: 10vh;
+    right: 2vw;
+    z-index: 50;
+    width: 30vw;
+    height: 20vh;
+    display: none;
+}
+svg{
+    object-fit: contain;
+}
+#scroller-text{
+    font-size: 5vh;
+}
+#scroller-text-wrapper{
+    align-self: flex-end;
+}
+#div1,
+#skills,#contacts {
+    background: #ff4400;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+#name,
+#skill-title,#contact-title {
+    font-size: 13.85vh;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 90%;
+    color: #ffe;
+    text-shadow: 0rem 1rem #222;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    align-self: flex-start;
+    z-index: 100;
+    text-align: right;
+}
+
+#introdiv {
+    align-self: flex-end;
+}
+
+#intro {
+    font-size: 5.19vh;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    color: #222;
+    z-index: 1;
+}
+
+#strongintro {
+    font-style: normal;
+    font-size: 4rem;
+}
+
+img {
+    width: inherit;
+    height: inherit;
+    object-fit: contain;
+}
+
+a {
+    color: #222;
+}
+
+#profileimage {
+    width: 17vw;
+    height: 64vh;
+    align-self: center;
+    padding-bottom: 16vh;
+    position: relative;
+    z-index: 4;
+}
+
+#name-and-intro {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    position: relative;
+    z-index: 3;
+}
+
+.title {
+    align-self: flex-start;
+    padding-right: 5%;
+    padding-top: 5%;
+}
+
+#skillset,#contactset {
+    width: 70%;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#contactset{
+    align-items: center;
+    flex-direction: row;
+}
+.skillsettitle,.contactind {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffe;
+    width: 15vw;
+    height: 15vw;
+    border-radius: 15vw;
+    align-self: stretch;
+}
+.contactind{
+    align-self: center;
+}
+.contactimg{
+    border-radius: 15vw;
+}
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3vh;
+    text-align: center;
+    color: #222;
+}
+.skillsetlogo1,.skillsetlogo2,.skillsetlogo3{
+    position: absolute;
+    width: 5vw;
+    height: 5vw;
+    opacity: 0;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+a{
+    width: inherit;
+    height: inherit;
+}
+#namesvg{
+    position: absolute;
+    right: -3vw;
+    top:40vh;
+    transform: rotate(270deg) scale(2);
+    z-index: 1;
+    margin: 0 0;
+    padding: 0 0;
+}
+@media screen and (max-width:700px) and (min-width:300px) {
+
+    #name,
+    #skill-title,#contact-title {
+        font-size: calc(6vh + 10vw);
+        text-shadow: 0rem 0.7rem #222;
+    }
+    #svg-scroll{
+        width: 50vw;
+        height: 40vh;
+        bottom: 0;
+    }
+    #intro {
+        font-size: 3vh;
+        margin-left: 2vw;
+    }
+
+    #strongintro {
+        font-size: 4vh;
+    }
+
+    #profileimage {
+        width: 60vw;
+        height: 35vh;
+    }
+
+    .skillsettitle,.contactind {
+        width: 15vh;
+        height: 15vh;
+        border-radius: 15vh;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        margin-left: 2%;
+    }
+    .contactimg{
+        border-radius: 15vh;
+    }
+    h2 {
+        font-size: 1.5vh;
+    }
+    #skills,#contacts{
+        flex-direction: column;
+    }
+    #skill-title,#contact-title{
+        writing-mode: horizontal-tb;
+        transform: rotate(0deg);
+    }
+    .title{
+        padding-right: 1%;
+        padding-bottom: 10%;
+        
+    }
+    .skillsetlogo1,.skillsetlogo2,.skillsetlogo3{
+        position: absolute;
+        width: 10vw;
+        height: 10vw;
+        z-index: 1;
+        -webkit-backdrop-filter: blur(1px);
+        backdrop-filter: blur(1px);
+    }
+    #contactset{
+        flex-direction: column;
+    }
+    #namesvg{
+        right: -25vw;
+    }
+}
